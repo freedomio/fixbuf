@@ -1,0 +1,7 @@
+[package]
+name = "fixbuf"
+version = "0.1.0"
+authors = ["xushuai <dyxushuai@gmail.com>"]
+
+[dependencies]
+byteorder = "0.3.0"
