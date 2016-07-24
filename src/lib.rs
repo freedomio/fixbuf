@@ -34,7 +34,7 @@ impl error::Error for Error {
 }
 
 
-#[derive(Default, Copy, Clone)]
+#[derive(Default, Clone)]
 pub struct ByteBuffer {
     data: Vec<u8>,
     wpos: usize,
