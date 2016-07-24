@@ -3,7 +3,7 @@ use byteorder::{ByteOrder, LittleEndian};
 use std::{fmt, error};
 use std::io::Write;
 
-#[derive(Clone,Copy,Debug)]
+#[derive(Clone, Copy, Debug)]
 pub enum Error {
     ReadOverflow,
     WriteOverflow,
@@ -26,15 +26,15 @@ impl error::Error for Error {
         }
     }
 
-	fn cause(&self) -> Option<&error::Error> {
-		match *self {
-			_ => None,
-		}
-	}
+    fn cause(&self) -> Option<&error::Error> {
+        match *self {
+            _ => None,
+        }
+    }
 }
 
 
-#[derive(Default, Clone)]
+#[derive(Default, Copy, Clone)]
 pub struct ByteBuffer {
     data: Vec<u8>,
     wpos: usize,
